@@ -1,0 +1,584 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+} 
+html{
+    font-size: 16px;
+}
+body{
+    background-color: #f3f7f7;
+    width: 100%;
+    width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+/* Navbar style start */
+nav{
+    height: 5rem;
+    background-color: #011;
+    padding: 0 4%;
+    font-size: 1.3rem;
+}
+
+nav, nav ul, nav .btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    color: white;
+}
+nav ul {
+    list-style: none;
+    gap: 3rem;
+}
+nav ul a{
+    text-decoration: none;
+    padding: 0.5rem;
+    color: white;
+}
+nav ul a:hover{
+    border-bottom: 1px solid white;
+}
+
+nav .btn-container{
+    gap: 2rem;
+}
+nav .btn-container a{
+    color: black;
+    background-image: linear-gradient(violet, white);
+    display: block;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+nav .btn-container a:hover{
+    background-image: linear-gradient(white, violet);
+}
+.menu-btn, .delete-btn{
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: #f3f7f7;
+    display: none;
+    z-index: 4443;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1219px){
+    nav ul {
+        gap: 2rem;
+    }
+}
+@media only screen and (max-width: 1024px){
+    /* Display the btn */
+    .menu-btn{
+        display: block;
+
+    }
+    
+    nav ul, nav .btn-container{
+        position: absolute;
+        background-color: #011;
+        right: 0;
+        width: 15rem;
+        flex-direction: column;
+        padding-bottom: 1rem;
+        gap: 1rem;
+        transform: translateX(100%);
+        transition: transform 0.5s ease;
+    }
+    .menu-btn:focus ~ ul, .menu-btn:focus ~ .btn-container{
+        transform: translateX(0);
+        
+    }
+    
+    nav ul{ 
+        top: 5rem;   
+    }
+    nav .btn-container{ 
+        top: 12.5rem;        
+    }
+
+}
+/* nav style ended */
+
+
+
+/* header img start  */
+.bannar{
+    width: 100%;
+    height: calc(100vh - 5rem);
+    display: flex;
+    background-image: linear-gradient(-200deg, rgba(154,100,54,255)
+    ,rgba(182,126,67,255),rgba(144,82,43,255), rgba(144,82,43,255),rgba(182,126,67,255));
+    flex-direction: column;    
+}
+.bannar h2{
+    text-align: center;
+    margin: 1rem 0;
+    color: #eee;
+}
+.bannar img{
+    width: 50%;
+    height: 26rem;
+    object-fit: fill;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.word{
+    margin-top: 0.7rem;
+    height: 2rem;
+    font-size: 1.7rem;
+    color: #eee;
+    text-align: center;
+    background: linear-gradient(to right, violet, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Main style start */
+main div h2{
+    text-align: center;
+    margin: 1.5rem 0 0.5rem 0;
+}
+.welcome > div{
+    display: flex;
+    height: 23rem;
+    gap: 2rem;
+    padding: 0 2rem;
+    justify-content: center;
+    align-items: center;  
+}
+.welcome img{
+    width: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.welcome div p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+div p em{
+    display: inline-block;
+    width: 4rem;
+} 
+/* Welcome style end */
+
+/* Service style start */
+
+.services > div{
+    display: flex;
+    margin: 2rem 0rem;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.services > div > div{
+    max-width: 30%;
+    min-width: 20rem;
+    background-color:  rgb(231,235,241);
+    padding: 2rem;
+    border-radius: 10px;
+}
+.services > div h4{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.services > div .service--paragraph{
+    font-family:sans-serif,Arial, Helvetica;
+    min-height: 13rem;
+    max-height: 18rem;
+}
+.services > div button{
+    padding: 0.5rem;
+    background-color: rgba(154,100,54,255);
+    outline: none;
+    color: #f3f7f7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Subscription style start */
+.program h1, .program h2, .program h3 {
+    text-align: center;
+}
+.program--container{
+    display: flex;
+    padding: 0 1rem;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+.program--container--first{
+    width: 65%;
+    background-color: rgb(231,235,241);
+    padding: 2rem 0;
+    line-height: 1.5rem;
+    font-family:sans-serif,Arial, Helvetica;
+    border-radius: 10px;
+}
+.program--container--last{
+    width: 30%;
+    background-color: rgb(144,82,43);
+    color: #f3f7f7;
+    padding: 2rem 0;
+    text-align: center;
+    border-radius: 10px;
+}
+.program--container--first--div{
+    display: flex;
+    padding: 1rem 2rem;
+    gap: 2rem;
+}
+.newspaper input{
+    width: 90%;
+    height: 1.5rem;
+    border-radius: 10px;
+    padding: 0 0.5rem;
+    
+}
+input, button{
+    outline: none;
+    border: none;
+}
+.newspaper button{
+    width: 7rem;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+footer{
+    display: flex;
+    background-color: #011;
+    color: #f3f7f7;
+    gap: 3rem;
+    padding: 2rem 3rem;
+    margin-top: 1rem;
+}
+footer div{
+    width: 100%;
+}
+footer div a{
+    color: #f3f7f7;
+}
+footer div button{
+    background-color: rgb(144,82,43);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+footer div button a{
+    color: #011;
+    text-decoration: none;
+}
+.icon{
+    display: inline-block;
+    margin: 0 0.25rem;
+}
+
+
+/* Responsiveness */
+/* @media screen and (max-width: 1272px) {
+    .services > div .service--paragraph{
+        height: 18rem;
+    }
+    
+}
+@media screen and (max-width: 1119px) {
+    .welcome_title{
+        margin-top: 0;
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width: 1060px) {
+    nav ul div{
+        width: 55%;
+    }
+    .program--container--first{
+        width: 100%;
+        gap: 4rem !important; 
+    }
+    .program--container--last{
+        width: 100%;
+    }
+    
+}
+
+
+@media screen and (max-width: 1032px) {
+    nav ul {
+        padding: 2rem 2rem;
+    } 
+}
+@media screen  and (max-width:998px){
+    // image section responsiveness 
+    .bannar{
+        position: relative;
+        display: block;
+        height: 28rem;
+    }
+    .bannar--image{
+        float: right;
+        width: 65%;
+        height: 28rem;
+        object-fit: cover;
+        
+    }
+    .header_paragraph{
+        position: relative;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+    }
+    .word{
+        display: none;
+    }
+    #word{
+        display: inline-block;
+        position: absolute;
+        top: 12rem;
+        left: 0;
+        color: #f3f7f7;
+        font-weight: bolder;
+        font-size: 1.4rem;
+        width: 30rem;
+        text-align: center;
+    }
+    .welcome_paragraph{
+        gap: 1rem;
+    }
+    .welcome_paragraph div{
+        margin-right: 1rem;
+    }
+    .welcome_paragraph img{
+        margin-left: 1rem;
+    }
+
+}
+@media screen and (max-width: 883px) {
+    .welcome > div{
+        flex-wrap: wrap; 
+        height: auto;
+    } 
+    .welcome_paragraph img,
+    .welcome_paragraph div{
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        
+    }
+    .welcome img{
+        height: 22rem;
+    }
+    .welcome div p{
+        text-align: justify;
+    }
+    .services > div .tutoring, .services > div .book_club, .services > div .training{
+        width: 40%;
+    }
+    .services > div .training {
+        height: 20rem !important;
+    }
+    .services > div .training .service--paragraph {
+        height: 12rem !important;
+    }
+    
+}
+
+@media screen and (max-width: 832px) {
+    .menu{
+        display: inline;
+        
+    }
+    .delete{
+        display:  inline;
+        visibility: hidden;
+    }
+    nav ul div{
+        display: none;
+        flex-direction : column;
+        background-color : #011;
+        position : absolute;
+        top : 0;
+        right : 0;
+        height : 17rem;
+        padding : 3.5rem 0 1rem 0;
+        width : 15rem;
+        animation: start 3s ease 0s 1 normal both;
+        z-index: 444;
+    }
+    @keyframes start {
+        0%{
+            right: -15rem;
+        }
+        100%{
+            right: 0;
+            
+        }
+        
+    }
+    @keyframes end {
+        0%{
+            right: 0;
+        }
+        100%{
+            right: -15rem;
+            
+        }
+        
+    }
+    
+     // image section 
+    
+}
+@media screen and (max-width: 829px) {
+    #word{
+        width: 20rem;
+    }  
+    
+}
+
+@media screen and (max-width: 727px) {
+    .bannar--image{
+        width: 75%;  
+    }
+    .welcome_title-1{
+        font-size: 1.3rem;
+    }
+    .welcome_paragraph div p, .welcome_paragraph div h2{
+        font-size: 1.2rem;
+    }
+    .welcome_paragraph div h2{
+        margin: 1rem;
+    }
+    .program--container--first--div{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left:0 ;
+        padding-right: 0;
+    }
+    .program--container--first--div > *{
+        width: 90%;
+    }
+    .program--container--first h2{
+        margin-bottom: 1rem;
+    }
+    footer{
+        flex-wrap: wrap;
+    }
+    footer > *{
+        width: 17rem !important;
+    }
+    footer div:last-child{
+        width: 100% !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    nav ul {
+        padding: 1rem 1rem;
+    }
+    .top_nav{
+        height: 4rem;
+    }
+    .menu, .delete{
+        top: 1rem;
+        right: 1rem;
+    } 
+    .bannar{
+        display: block;
+        position: relative; 
+        height: 24rem; 
+    }
+    .bannar--image{
+        height: 24rem;
+        object-fit: cover;
+        width: 100%;
+        // margin-bottom: 2rem; 
+    }
+    #word{
+        top: 25rem;
+        width: 100%;
+        font-size: 1.2rem;
+        color: #011;
+    }
+    .header_paragraph{
+        display: none;
+    }
+    .welcome_title-1{
+        padding: 1.5rem !important;
+        font-size: 1.2rem;
+    }
+    .welcome_paragraph img{
+        height: 15rem !important;
+    }
+    .welcome_paragraph div p, .welcome_paragraph div h2{
+        font-size: 1rem;
+    }
+    .services > div .tutoring, .services > div .book_club, .services > div .training{
+        width: 70%;
+    }
+
+    .services > div .book_club {
+        height: 20rem !important;
+    }
+    .services > div .book_club .service--paragraph {
+        height: 12rem !important;
+    }
+    h1{
+        font-size: 1.3rem;
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
+      
+}
+@media screen and (max-width: 400px) {
+    .bannar--image,.bannar{
+        height: 20rem;
+    }  
+    #word{
+        top: 21rem;
+        font-size: 1rem;
+    }
+    .services > div .tutoring, .services > div .book_club, .services > div .training{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 340px) {
+    nav ul {
+        padding: 1rem 0.5rem;
+    }
+    .menu, .delete{
+        top: 1rem;
+        right: 0.5rem;
+    } 
+    nav ul li:first-child{
+        font-size: 0.8rem;
+    } 
+    footer > *{
+        width: 100%;
+    }
+    
+    .services > div .tutoring, .services > div .book_club, .services > div .training{
+        width: 95%;
+    }
+} */
+
+
+
+
