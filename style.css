@@ -121,8 +121,12 @@ nav .btn-container a:hover{
     
     nav ul, nav .btn-container{
         position: absolute;
-        right: -100%;
-        width: 15rem;
+        right: 0;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
         flex-direction: column;
         padding-bottom: 1rem;
         gap: 1rem;
@@ -134,18 +138,17 @@ nav .btn-container a:hover{
         background-color: #011;
         height: 16rem;
         justify-content: start;
+        top: 5rem; 
     }
     .menu-btn:focus ~ ul, .menu-btn:focus ~ .btn-container{
-        right: 0;
         transform: translateX(0);
+        width: 15rem;
         
     }
     
-    nav ul{ 
-        top: 5rem;   
-    }
     nav .btn-container{ 
-        top: 14rem;        
+        top: 14rem; 
+        height: auto;
     }  
      /* Bannar */
      .bannar img{
@@ -168,7 +171,7 @@ nav .btn-container a:hover{
         gap: 2rem;
         width: 100vw;
     }
-    nav .btn-container{ 
+    .menu-btn:focus ~  .btn-container{ 
         top: 16rem;
         width: 100vw;        
     }
