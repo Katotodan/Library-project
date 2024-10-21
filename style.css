@@ -70,42 +70,6 @@ nav .btn-container a:hover{
     cursor: pointer;
 }
 
-@media only screen and (max-width: 1219px){
-    nav ul {
-        gap: 2rem;
-    }
-}
-@media only screen and (max-width: 1024px){
-    /* Display the btn */
-    .menu-btn{
-        display: block;
-
-    }
-    
-    nav ul, nav .btn-container{
-        position: absolute;
-        background-color: #011;
-        right: 0;
-        width: 15rem;
-        flex-direction: column;
-        padding-bottom: 1rem;
-        gap: 1rem;
-        transform: translateX(100%);
-        transition: transform 0.5s ease;
-    }
-    .menu-btn:focus ~ ul, .menu-btn:focus ~ .btn-container{
-        transform: translateX(0);
-        
-    }
-    
-    nav ul{ 
-        top: 5rem;   
-    }
-    nav .btn-container{ 
-        top: 12.5rem;        
-    }
-
-}
 /* nav style ended */
 
 
@@ -141,6 +105,84 @@ nav .btn-container a:hover{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;  
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@media only screen and (max-width: 1219px){
+    nav ul {
+        gap: 2rem;
+    }
+}
+@media only screen and (max-width: 1024px){
+    /* Display the btn */
+    .menu-btn{
+        display: block;
+
+    }
+    
+    nav ul, nav .btn-container{
+        position: absolute;
+        right: -100%;
+        width: 15rem;
+        flex-direction: column;
+        padding-bottom: 1rem;
+        gap: 1rem;
+        transform: translateX(100%);
+        transition: all 1s ease;
+    }
+    nav ul{
+        padding-top: 1rem;
+        background-color: #011;
+        height: 16rem;
+        justify-content: start;
+    }
+    .menu-btn:focus ~ ul, .menu-btn:focus ~ .btn-container{
+        right: 0;
+        transform: translateX(0);
+        
+    }
+    
+    nav ul{ 
+        top: 5rem;   
+    }
+    nav .btn-container{ 
+        top: 14rem;        
+    }  
+     /* Bannar */
+     .bannar img{
+        width: 70%;
+        height: 28rem;
+    }
+    .word{
+        margin-top: 0.6rem;
+        font-size: 1.5rem;
+    }
+
+}
+@media only screen and (max-width: 600px){
+    html{
+        font-size: 14px;
+    }
+    .menu-btn:focus ~ ul{
+        height: calc(100vh - 5rem);
+        justify-content: start;
+        gap: 2rem;
+        width: 100vw;
+    }
+    nav .btn-container{ 
+        top: 16rem;
+        width: 100vw;        
+    }
+    /* Bannar */
+    .bannar img{
+        width: 100%;
+        height: auto;
+    }
+    .word{
+        margin-top: 0.6rem;
+        font-size: 1.5rem;
+    }
+    
+
 }
 
 /* Main style start */
