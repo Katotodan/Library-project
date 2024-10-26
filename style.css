@@ -420,7 +420,10 @@ footer div button a{
     .program--container--last{
         width: 90%;
     }
-    
+    /* Footer icons */
+    .icon{
+        font-size: 1.2rem;
+    }
 }
 @media only screen and (max-width: 400px){
     nav{
