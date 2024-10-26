@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family:Arial, Helvetica, sans-serif;
 } 
+body, html {
+    width: 100%;
+}
 html{
     font-size: 16px;
 }
@@ -30,6 +33,7 @@ nav, nav ul, nav .btn-container {
     align-items: center;  
     color: white;
 }
+
 nav ul {
     list-style: none;
     gap: 3rem;
@@ -145,6 +149,7 @@ div p em{
     justify-content: center; /* Center items horizontally */
     gap: 2rem;
     margin: 2rem 0rem;
+    padding: 0 2rem;
 }
 
 .services > div > div{
@@ -169,166 +174,16 @@ div p em{
     border-radius: 5px;
     cursor: pointer;
 }
-@media only screen and (max-width: 1219px){
-    nav ul {
-        gap: 2rem;
-    }
-    .services  h4{
-        height: 2rem;
-    }
-}
-@media only screen and (max-width: 1024px){
-    /* Display the btn */
-    .menu-btn{
-        display: block;
-
-    }
-    
-    nav ul, nav .btn-container{
-        position: absolute;
-        right: 0;
-        width: 0px;
-        height: 0px;
-        padding: 0;
-        margin: 0;
-        overflow: hidden;
-        flex-direction: column;
-        padding-bottom: 1rem;
-        gap: 1rem;
-        transform: translateX(100%);
-        transition: all 1s ease;
-    }
-    nav ul{
-        padding-top: 1rem;
-        background-color: #011;
-        height: 16rem;
-        justify-content: start;
-        top: 5rem; 
-    }
-    .menu-btn:focus ~ ul, .menu-btn:focus ~ .btn-container{
-        transform: translateX(0);
-        width: 15rem;
-        
-    }
-    
-    nav .btn-container{ 
-        top: 14rem; 
-        height: auto;
-    }  
-     /* Bannar */
-     
-     .bannar img{
-        width: 70%;
-        height: 28rem;
-    }
-    .word{
-        margin-top: 0.6rem;
-        font-size: 1.5rem;
-        max-height: auto;
-    }
-    /* Welcome section */
-    .welcome > div{
-        flex-direction: column;
-    }
-    .welcome div p{
-        font-size: unset;
-        text-align: left;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .welcome img{
-        width: 70%;
-        height: auto;
-    }
-    /* Service */
-    .services > div{
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 40%));
-    }
-    .services > div .service--paragraph{
-        height: 13rem;
-    }
-
-}
-@media only screen and (max-width: 600px){
-    html{
-        font-size: 14px;
-    }
-    .menu-btn:focus ~ ul{
-        height: calc(100vh - 5rem);
-        justify-content: start;
-        gap: 2rem;
-        width: 100vw;
-    }
-    .menu-btn:focus ~  .btn-container{ 
-        top: 16rem;
-        width: 100vw;        
-    }
-    /* Bannar */
-    .bannar{
-        min-height: 35rem;
-    }
-    .bannar img{
-        width: 100%;
-        height: auto;
-    }
-    .word{
-        margin-top: 0.6rem;
-        font-size: 1.5rem;
-    }
-    /* Welcome section */
-    .welcome img{
-        width: 100%;
-    }
-    /* Service */
-    .services > div{
-        grid-template-columns: 90%;
-    }
-    .services > div .service--paragraph{
-        height: 11rem;
-    }
-}
-@media only screen and (max-width: 400px){
-    nav{
-        padding: 0 2%;
-    }
-    .menu-btn, .delete-btn{
-        right: 1rem;
-    }
-    .bannar{
-        min-height: 28em;
-    }
-    .bannar > h2{
-        display: none;
-    }
-    /* Service */
-    .services > div .service--paragraph{
-        height: 10rem;
-    }
-    .services > div .tutoring .service--paragraph{
-        height: 16rem !important;
-    }
-}
-@media only screen and (max-width: 340px){
-    body, html {
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-    }
-    nav div{
-        font-size: 1.1rem;
-    }
-    .menu-btn, .delete-btn{
-        right: 0.5rem;
-    }
-    
-}
 
 /* Subscription style start */
-.program h1, .program h2, .program h3 {
+.program h2, .program h3 {
     text-align: center;
 }
 .program--container{
     display: flex;
-    padding: 0 1rem;
+    padding: 0 2rem;
     justify-content: center;
-    gap: 3rem;
+    gap: 2rem;
     flex-wrap: wrap;
 }
 .program--container--first{
@@ -369,6 +224,7 @@ input, button{
     padding: 0.5rem 1rem;
     cursor: pointer;
 }
+
 footer{
     display: flex;
     background-color: #011;
@@ -396,6 +252,227 @@ footer div button a{
     display: inline-block;
     margin: 0 0.25rem;
 }
+@media only screen and (max-width: 1219px){
+    nav ul {
+        gap: 2rem;
+    }
+    .services  h4{
+        height: 2rem;
+    }
+}
+/* Tablet viewport */
+@media only screen and (max-width: 1024px){
+    /* Display the btn */
+    .menu-btn{
+        display: block;
+
+    }
+    
+    nav ul, nav .btn-container{
+        position: absolute;
+        right: 0;
+        width: 0px;
+        height: 0px;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        flex-direction: column;
+        padding-bottom: 1rem;
+        gap: 1rem;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: all 1s ease, opacity 0.9s ease;
+        
+    }
+    nav ul{
+        padding-top: 1rem;
+        background-color: #011;
+        height: 16rem;
+        justify-content: start;
+        top: 5rem; 
+    }
+    .active ~ ul, .active ~ .btn-container{
+        transform: translateX(0);
+        width: 15rem;
+        opacity: 1;
+        
+    }
+    
+    nav .btn-container{ 
+        top: 14rem; 
+        height: auto;
+    }  
+     /* Bannar */
+     
+     .bannar img{
+        width: 70%;
+        height: 28rem;
+    }
+    .word{
+        margin-top: 0.6rem;
+        font-size: 1.5rem;
+        max-height: auto;
+    }
+    /* Welcome section */
+    .welcome > div{
+        flex-direction: column;
+    }
+    .welcome div p{
+        font-size: unset;
+        text-align: left;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .welcome img{
+        width: 70%;
+        height: auto;
+    }
+    /* Service */
+    .services > div{
+        padding-left: 5%;
+        padding-right: 5%;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 40%));
+        padding: 0 1rem;
+    }
+    .services > div .service--paragraph{
+        height: 13rem;
+    }
+    /* Program */
+    .program--container{
+        padding: 0 1rem;
+    }
+    .program--container--first{
+        width: 90%;
+    }
+    .program--container--last{
+        width: 90%;
+        padding: 1rem 0;
+    }
+    .newspaper h2{
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+    }
+    /* Footer */
+    footer{
+        display: flex;
+        gap: 2rem;
+        padding: 2rem;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+    }
+    footer  div{
+        min-width: 15rem;
+        max-width: 30%;
+    }
+
+}
+@media only screen and (max-width: 765px){
+    .program--container--first--div{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+@media only screen and (max-width: 600px){
+    html{
+        font-size: 14px;
+    }
+    .active ~ ul{
+        height: calc(100vh - 5rem);
+        justify-content: start;
+        gap: 2rem;
+        width: 100vw;
+    }
+    .active ~  .btn-container{ 
+        top: 16rem;
+        width: 100vw;        
+    }
+    /* Bannar */
+    .bannar{
+        min-height: 35rem;
+    }
+    .bannar img{
+        width: 100%;
+        height: auto;
+    }
+    .word{
+        margin-top: 0.6rem;
+        font-size: 1.5rem;
+    }
+    /* Welcome section */
+    .welcome img{
+        width: 100%;
+    }
+    /* Service */
+    .services > div{
+        grid-template-columns: 90%;
+        padding: 0 0.5rem;
+    }
+    .services > div .service--paragraph{
+        height: 11rem;
+    }
+    /* Program */
+    .program--container{
+        padding: 0 0.5rem;
+    }
+    .program--container--first{
+        width: 90%;
+    }
+    .program--container--last{
+        width: 90%;
+    }
+    
+}
+@media only screen and (max-width: 400px){
+    nav{
+        padding: 0 2%;
+    }
+    .menu-btn, .delete-btn{
+        right: 1rem;
+    }
+    .bannar{
+        min-height: 28em;
+    }
+    .bannar > h2{
+        display: none;
+    }
+    /* Service */
+    .services > div{
+        grid-template-columns: 98%;
+    }
+    .services > div .service--paragraph{
+        height: 10rem;
+    }
+    .services > div .tutoring .service--paragraph{
+        height: 16rem !important;
+    }
+    /* Program */
+    .program--container--first{
+        width: 98%;
+    }
+    .program--container--last{
+        width: 98%;
+    }
+}
+@media only screen and (max-width: 340px){
+    body, html {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    nav div{
+        font-size: 1.1rem;
+    }
+    .menu-btn, .delete-btn{
+        right: 0.5rem;
+    }
+    /* Footer */
+    footer  div{
+        min-width: 100%;
+        max-width: 100%;
+        text-wrap: wrap;
+    }  
+}
+/* Add responsiveness for smart wacthes */
 
 
 

@@ -13,16 +13,16 @@
     <header>
         <nav>
             <div>The Love Through Literacy Project 🍀</div>
-            <button class="menu-btn"><i class="bi bi-list"></i></button>
-            <button class="delete-btn"><i class="bi bi-x"></i></button>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="">Service</a></li>
-                <li><a href="">About</a></li> 
+            <button class="menu-btn" ><i class="bi bi-list" data-menu="menu"></i></button>
+            
+            <ul data-menu="dropdown">
+                <li><a href="index.html" data-menu="dropdown">Home</a></li>
+                <li><a href="#service" data-menu="dropdown">Service</a></li>
+                <li><a href="about.html" data-menu="dropdown">About</a></li> 
             </ul>
-            <div class="btn-container">    
-                <a href="">Log in</a>
-                <a href="">Donate</a>  
+            <div class="btn-container" data-menu="dropdown">    
+                <a href="" data-menu="dropdown">Log in</a>
+                <a href="" data-menu="dropdown">Donate</a>  
             </div> 
         </nav>
         
@@ -55,7 +55,7 @@
             </div> 
         </div>
         <!-- Service part -->
-        <div class="services">
+        <div class="services" id="service">
             <h2>Our services</h2>
             <div class="services_container">
                 <div class="tutoring">
@@ -96,18 +96,18 @@
             <h2>Library Subscriptions</h2>
             <div class="program--container">
                 <div class="program--container--first">
-                    <h2>We Offer Two Type of Subscriptions</h2>
+                    <h3>We Offer Two Type of Subscriptions</h2>
                     <div class="program--container--first--div">
                         <div class="single--sub">
-                            <h3>Single Family Subscription with Monthy Payments</h3><br>
+                            <h4>Single Family Subscription with Monthy Payments</h3><br>
                             <li>10 Books which can be exchanged during the month.</li>
                             <li>Annual Membership Fee 30,000 Ush</li>
                             <li>Monthy Subscription Fee 20,000 Ush</li>
                         </div>
                         <div class="sub">
-                            <h3>Subscriptions for Primary Schools and Educational Organizations.</h3><br>
+                            <h4>Subscriptions for Primary Schools and Educational Organizations.</h3><br>
                             <li>Number of Books is based on the requirement of the school or organization.</li>
-                            <li>Annual Membership Fee 50,000</li>
+                            <li>Annual Membership Fee 50,000 Ush</li>
                             <li>Subscription costs dependent upon the number of books needed.</li>
                         </div>
                     </div>
@@ -142,13 +142,13 @@
         <div>
             <a href="#">Why should you donate?</a><br><br>
             <a href="#">Find us on the map</a> <br> <br>
-            <button> <a href="#">Donate</a></button>
+            
             
         </div>
         <div>
             <a href="#">Why should you become a member?</a> <br><br>
             <a href="#">Why should you become a patner?</a> <br><br>
-            <button> <a href="#">Sign in</a></button>
+            <button> <a href="#">Donate</a></button>
         </div>
     </footer>
 
