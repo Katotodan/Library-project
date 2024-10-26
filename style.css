@@ -240,7 +240,7 @@ footer div a{
     color: #f3f7f7;
 }
 footer div button{
-    background-color: rgb(144,82,43);
+    background-image: linear-gradient(white, violet);
     padding: 0.5rem 1rem;
     border-radius: 5px;
 }
